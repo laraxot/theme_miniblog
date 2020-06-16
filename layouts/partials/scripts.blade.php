@@ -1,27 +1,35 @@
-{{-- <script src="js/jquery-3.3.1.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery-3.3.1.min.js') }}
-{{-- <script src="js/jquery-migrate-3.0.1.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery-migrate-3.0.1.min.js') }}
-{{-- <script src="js/jquery-ui.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery-ui.js') }}
-{{-- <script src="js/popper.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/popper.min.js') }}
-{{-- <script src="js/bootstrap.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/bootstrap.min.js') }}
-{{-- <script src="js/owl.carousel.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/owl.carousel.min.js') }}
-{{-- <script src="js/jquery.stellar.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery.stellar.min.js') }}
-{{-- <script src="js/jquery.countdown.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery.countdown.min.js') }}
-{{-- <script src="js/jquery.magnific-popup.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/jquery.magnific-popup.min.js') }}
-{{-- <script src="js/bootstrap-datepicker.min.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/bootstrap-datepicker.min.js') }}
-{{-- <script src="js/aos.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/aos.js') }}
-{{-- <script src="js/main.js"></script> --}}
-{{ Theme::add('pub_theme::dist/js/main.js') }}
+<!-- JavaScript files-->
+@stack('scripts_before')
+<script>
+    var basePath = '';
+    var base_url='{{ url('') }}';
+    var lang='{{ \App::getLocale() }}';
+    {{--  var google_maps_api='{{ config('xra.google.maps.api') }}'; --}}
+@if(\Request::has('address'))
+    var address ="{{ \Request::input('address') }}";
+@endif
+@if(\Request::has('lat') && \Request::has('lng'))
+    var lat ="{{ \Request::input('lat') }}";
+    var lng ="{{ \Request::input('lng') }}";
+@endif
+window.Auth = @json([
+    'signedIn' => Auth::check(),
+    'id'=>Auth::id(),
+]);
+window.Urls = @json([
+    'api' => url('/api'),
+    'login' => route('login')
+]);
+</script>
+@php
+    Theme::add('pub_theme::dist/js/manifest.js',1);
+    Theme::add('pub_theme::dist/js/vendor.js',2);
+    Theme::add('pub_theme::dist/js/app.js',3);
 
-
-{!! Theme::showScripts(false) !!}
+    Theme::add('pub_theme::resources/js/aos.js');
+    Theme::add('pub_theme::resources/js/main.js'); 
+    //Theme::add('theme::js/modal_ajax.js');
+    //Theme::add('theme::js/modal_iframe.js');
+@endphp
+  {!! Theme::showScripts(false) !!}
+  @stack('scripts')

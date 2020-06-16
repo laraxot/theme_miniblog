@@ -1,0 +1,34 @@
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+//<link rel="stylesheet" href="css/bootstrap.min.css">
+// Magnific PopUp
+@import "~magnific-popup/src/css/main.scss";
+//<link rel="stylesheet" href="css/magnific-popup.css">
+//@import 'jquery-ui';
+//<link rel="stylesheet" href="css/jquery-ui.css">
+$owl-image-path: "~owl.carousel/src/img/";
+@import '~owl.carousel/src/scss/owl.carousel.scss';
+//<link rel="stylesheet" href="css/owl.carousel.min.css">
+@import '~owl.carousel/src/scss/owl.theme.default.scss';
+//<link rel="stylesheet" href="css/owl.theme.default.min.css">
+//@import '~bootstrap-datepicker/dist/css/boostrap-datepicker.css';
+//<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+//@import '~flaticon';
+//<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+//<link rel="stylesheet" href="css/aos.css">
+//<link rel="stylesheet" href="css/style.css">
+
+@import "../css/aos.css";
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+/* Base */
+@import "site-base";
+/* Navbar */
+@import "site-navbar";
+/* Blocks */
+@import "site-blocks";

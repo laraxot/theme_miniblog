@@ -18,6 +18,10 @@
             </form>
           </div>
 
+          @php
+            //dddx(get_defined_vars());
+          @endphp
+
           <div class="col-4 site-logo">
             <a href="index.html" class="text-black h2 mb-0">Mini Blog</a>
           </div>
@@ -27,12 +31,13 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
 
 
+                <li>
 
-                @auth
-                    <a href="{{ route('logout',$params) }}" class="dropdown-item"
+                  @auth
+                    <a href="{{ route('logout',$params) }}" class=""
                       onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();">
-                    <i class="fas fa-sign-out-alt mr-2 text-muted"></i>@lang('lu::auth.sign_out')
+                      {{-- <iclass="fasfa-sign-out-altmr-2text-muted"></i> --}}@lang('lu::auth.sign_out')
                     </a>
                     <form id="logout-form"
                       action="{{ route('logout',$params) }}"
@@ -40,21 +45,44 @@
                       style="display: none;">
                       {{ csrf_field() }}
                     </form>
-                @else
+                    {{-- 
+                    loggato
+                    --}}
+
+
+
+                    <li><a href="category.html">Crea articolo</a></li>
+
+
+
+
+                    @else
+                    {{-- nonloggato --}}
+                      <li class="nav-item">
+                      <a href="{{ route('login') }}" class="nav-link">
+                      @lang('lu::auth.sign_in')
+                      </a>
+                      </li>
+                      <li class="nav-item">
+                      <a href="{{ route('container0.create',['lang'=>$lang,'container0'=>'profile']) }}" class="nav-link">
+                      @lang('lu::auth.sign_up')
+                      </a>
+                      </li>
+                    @endauth
+                </li>
+
+
                 
-                @endauth
 
 
-
-
-
-
-                <li><a href="category.html">Home</a></li>
-                <li><a href="category.html">Politics</a></li>
-                <li><a href="category.html">Tech</a></li>
-                <li><a href="category.html">Entertainment</a></li>
-                <li><a href="category.html">Travel</a></li>
-                <li><a href="category.html">Sports</a></li>
+                {{-- 
+                  <li><a href="category.html">Home</a></li>
+                  <li><a href="category.html">Politics</a></li>
+                  <li><a href="category.html">Tech</a></li>
+                  <li><a href="category.html">Entertainment</a></li>
+                  <li><a href="category.html">Travel</a></li>
+                  <li><a href="category.html">Sports</a></li>
+                  --}}
                 <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
               </ul>
             </nav>
