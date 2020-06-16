@@ -25,6 +25,30 @@
           <div class="col-8 text-right">
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
+
+
+
+                @auth
+                    <a href="{{ route('logout',$params) }}" class="dropdown-item"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt mr-2 text-muted"></i>@lang('lu::auth.sign_out')
+                    </a>
+                    <form id="logout-form"
+                      action="{{ route('logout',$params) }}"
+                      method="POST"
+                      style="display: none;">
+                      {{ csrf_field() }}
+                    </form>
+                @else
+                
+                @endauth
+
+
+
+
+
+
                 <li><a href="category.html">Home</a></li>
                 <li><a href="category.html">Politics</a></li>
                 <li><a href="category.html">Tech</a></li>
