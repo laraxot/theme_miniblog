@@ -85,8 +85,9 @@
           </div>
           
           <!-- END main-content -->
-
           @include('pub_theme::layouts.default.partials.sidebar')
+          {{--
+--}}
 
           <!-- END sidebar -->
 
@@ -95,9 +96,9 @@
     </section>
 
     
+    {{-- 
     @include('pub_theme::layouts.default.most_related_post')
 
-    {{-- 
       @include('pub_theme::layouts.default.subscribe_newsletter')
     --}}
 

@@ -23,5 +23,9 @@
     </div>
 </div>
 
-
-@include('pub_theme::layouts.default.sidebar.author.popular_post')
+@php
+    //devo prendere i post più popolari!!!!
+    //$popular_post = $profile->articles()->orderBy('views_count')->limit(3)->get();
+    $popular_post = $profile->articles()->limit(3)->get();
+@endphp
+@include('pub_theme::layouts.default.sidebar.author.popular_post', ['articles' => $popular_post])
