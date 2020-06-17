@@ -25,7 +25,7 @@
         "dotenv": "^8.2.0",
         "flaticon": "^0.1.0",
         "icomoon": "^1.0.0",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery-migrate": "^3.3.0",
         "jquery-ui": "^1.12.1",
         "jquery.countdown": "^1.2.8",
