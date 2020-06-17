@@ -8,7 +8,7 @@ window._ = require('lodash');
 
 try {
     window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
+    const jQuery=window.$ = window.jQuery = require('jquery');
     require('bootstrap');
     //require('bootstrap-select');
 
@@ -18,7 +18,7 @@ try {
     //require('prismjs');
     //var Swiper = $.Swiper = require('swiper');
     //window.Swiper = require('swiper/js/swiper');
-
+    require('jquery-migrate');
     //require('nouislider');
     //window.Dropzone=require('dropzone');
     //window.SmoothScroll = require('smooth-scroll');

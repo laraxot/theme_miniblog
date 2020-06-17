@@ -23,7 +23,7 @@
           @endphp
 
           <div class="col-4 site-logo">
-            <a href="index.html" class="text-black h2 mb-0">Mini Blog</a>
+            <a href="{{ url($lang) }}" class="text-black h2 mb-0">Mini Blog</a>
           </div>
 
           <div class="col-8 text-right">
@@ -50,8 +50,10 @@
                     --}}
 
 
-
-                    <li><a href="category.html">Crea articolo</a></li>
+                    @php
+                      $create_url=route('container0.create',['lang'=>$lang,'container0'=>'article']);
+                    @endphp
+                    <li><a href="{{ $create_url }}">Crea articolo</a></li>
 
 
 

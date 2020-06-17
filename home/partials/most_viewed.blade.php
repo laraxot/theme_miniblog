@@ -11,8 +11,8 @@
                 <a href="{{ Panel::get($article)->url() }}" class="h-entry mb-30 v-height gradient"
                     style="background-image: url('images/img_1.jpg');">
 					<div class="text">
-						<h2>{{ $article->title }}</h2>
-						<span class="date">{{ $article->updated_at }}</span>
+                        <h2>{{ $article->title }}</h2>
+						<span class="date">{{ $article->updated_at->diffForHumans() }}</span>
 					</div>
                 </a>
                 @endforeach
