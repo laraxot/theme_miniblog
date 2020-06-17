@@ -26,8 +26,8 @@ window.Urls = @json([
     Theme::add('pub_theme::dist/js/vendor.js',2);
     Theme::add('pub_theme::dist/js/app.js',3);
 
-    Theme::add('pub_theme::resources/js/aos.js');
-    Theme::add('pub_theme::resources/js/main.js'); 
+    //Theme::add('pub_theme::resources/js/aos.js');
+    //Theme::add('pub_theme::resources/js/main.js'); 
     //Theme::add('theme::js/modal_ajax.js');
     //Theme::add('theme::js/modal_iframe.js');
 @endphp

@@ -20,6 +20,9 @@ $owl-image-path: "~owl.carousel/src/img/";
 //<link rel="stylesheet" href="css/aos.css">
 //<link rel="stylesheet" href="css/style.css">
 
+@import '~select2/dist/css/select2.css';
+@import '~select2-theme-bootstrap4/dist/select2-bootstrap.css';
+
 @import "../css/aos.css";
 
 @import "bootstrap/functions";
