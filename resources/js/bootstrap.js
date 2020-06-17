@@ -19,6 +19,7 @@ try {
     //var Swiper = $.Swiper = require('swiper');
     //window.Swiper = require('swiper/js/swiper');
     require('jquery-migrate');
+    require('select2');
     //require('nouislider');
     //window.Dropzone=require('dropzone');
     //window.SmoothScroll = require('smooth-scroll');

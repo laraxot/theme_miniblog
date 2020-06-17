@@ -1,4 +1,7 @@
 @php
+	//questa sezione dovrebbe mostrare l'articolo più visualizzato per ogni categoria...
+	//prendere le categorie con più articoli e tra quelli prendere il più visualizzato?
+
     $article_cats=Theme::XotModelEager('category')->limit(4)->get();
     //dddx($article_cats[0]);
 @endphp
