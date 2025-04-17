@@ -1,0 +1,13 @@
+/*!
+ * jQuery Migrate - v3.3.0 - 2020-05-05T01:57Z
+ * Copyright OpenJS Foundation and other contributors
+ */
+
+/*! Magnific Popup - v1.1.0 - 2016-02-20
+* http://dimsemenov.com/plugins/magnific-popup/
+* Copyright (c) 2016 Dmitry Semenov; */
+
+/**
+ * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
+ * Released under MIT license, http://github.com/requirejs/almond/LICENSE
+ */
